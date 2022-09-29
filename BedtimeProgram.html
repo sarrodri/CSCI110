@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+<style>
+    fieldset {
+        padding: 5px;
+        width:100px;
+        background-color:rgb(184, 248, 165);
+    }
+
+    input {
+        padding: 5px;
+        border-radius: 4px;
+        background-color: rgb(255, 255, 255);
+    }
+
+    button {
+        background-color: rgb(255, 255, 255);
+    }
+</style>
+
+<script>
+
+function newbedtime() {
+    let age = parseInt(document.getElementById("ageBox").value);
+    let season = document.getElementById("timeofyear").value;
+    
+let bedtime;
+if (age <= 5) {
+    if (season == "Summer" ^ "Spring")
+    bedtime = "8:30pm" ; 
+    else 
+        bedtime = "8:00pm"
+}
+if (age >=6 && age <= 12) {
+    if (season == "Summer")
+    bedtime = "9:30pm";
+    else
+        bedtime = "8:30pm"
+}
+if (age >= 13) {
+    if (season == "Summer")
+    bedtime = "10:30pm";
+    else
+        bedtime = "9:30pm"
+
+
+}
+
+document.getElementById("bedtimeDiv").innerHTML=bedtime;
+}
+
+</script>
+
+</head>
+
+<body>
+    <h3> What Time Should Your Child Go to Bed?</h3>
+    
+    <!-- Input field -->
+
+    <fieldset>
+        <h4>Insert your child's age and the current time of year below</h4>
+        <label for="ageBox">What is your child's age? </br>
+            <input id="ageBox" type="text"></label> </br>
+        </br>
+
+        <label for="timeofyear">Enter the current season: </br> 
+            <input id="timeofyear" type="text" value="(ex: Spring)"></label> </br>
+        </br>
+        <button class="button" onclick='newbedtime()'> SUBMIT </button> </br>
+    </br>
+        <label for="output">Your child's bedtime should be: </label> 
+        <div id="bedtimeDiv"></div>
+    </fieldset>
+
+</body>
+</html>

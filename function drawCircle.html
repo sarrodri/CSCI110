@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        fieldset {
+            padding: 5px;
+            width:100px;
+            background-color:rgb(184, 248, 165);
+        }
+    
+        input {
+            padding: 5px;
+            border-radius: 4px;
+            background-color: rgb(255, 255, 255);
+        }
+    
+        button {
+            background-color: rgb(255, 255, 255);
+        }
+    </style>
+
+<script>
+    function drawCircle(centerX, centerY, radius) {
+        let x = parseInt(document.getElementById("xInputBox").value);
+        let y = parseInt(document.getElementById("yInputBox").value);
+        let radius = parseInt(document.getElementById("radiusInputBox").value);
+
+        drawCircle(x, y, radius);
+        }
+    
+    document.getElementById("outputDiv").innerHTML = drawCircle
+
+</script>
+</head>
+<body>
+    
+    <!-- Input field -->
+
+    <fieldset>
+        <h4>Insert x and y below</h4>
+        <label for="xInputBox">X: </br>
+            <input id="xInputBox" type="text"></label> </br>
+        </br>
+
+        <label for="yInputBox">Y: </br> 
+            <input id="yInputBox" type="text"></label> </br>
+        </br>
+        <button class="button" onclick='drawCircle()'> SUBMIT </button> </br>
+    </br>
+        <label for="radiusInputBox"></label> 
+        <div id="outputDiv"></div>
+    </fieldset>
+</body>
+</html>
