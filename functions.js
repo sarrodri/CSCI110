@@ -12,3 +12,4 @@ function doInputOutput()
         let s = a + b + c / 2
         Math.sqrt(s(s-a)(s-b)(s-c))
     }
+    document.getElementById("outputDiv").innerHTML
