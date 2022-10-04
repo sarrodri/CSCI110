@@ -1,17 +1,31 @@
+// JS functions to compute volume
 
+function doInputOutput(){    
+    
+    let height=document.getElementById("heightInput").value;
+    let width=document.getElementById("widthInput").value;
+    let depth=document.getElementById("depthInput").value;
+    let sweep=document.getElementById("sweepInput").value;
+    let housevol = houseVolume(width, depth, height, sweep)
 
-function doInputOutput()
+    document.getElementById("outputDiv").innerHTML = housevol;
+}
+
     function houseVolume(width, depth, height, sweep) {
-        livingVolume + roofVolume
+        let space = livingVolume(width, depth, height);
+        let roof = roofVolume(width,depth,sweep);
+        return space + roof;
     }
     function livingVolume(width, depth, height) {
-        width * depth * height
+        livingSpace = width * depth * height;
+        return livingSpace;
     }
     function roofVolume(width, depth, sweep) {
-        triangleArea * width
+        triArea = triangleArea(sweep, sweep, depth);
+        return triArea * width;
     }
-    function triangleArea(a, b, c) {
-        let s = a + b + c / 2
-        Math.sqrt(s(s-a)(s-b)(s-c))
-    }
-    document.getElementById("outputDiv").innerHTML
+    function triangleArea(sweep, sweep, depth) {
+        let s = (sweep + sweep + depth) / 2;
+        let area = Math.sqrt(s*(s-sweep)*(s-sweep)*(s-depth));
+        return area;
+    } 
