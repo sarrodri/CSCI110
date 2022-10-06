@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,36 +8,38 @@
     <title>Document</title>
     <script src="houseVolumeProgram.js"></script>
 </head>
+
 <body>
     <style>
-  fieldset {
-    width: 100px;
-    padding: 25px;
-  }
+        fieldset {
+            width: 100px;
+            padding: 25px;
+        }
     </style>
     <fieldset>
-        <strong> Calculate the volume of your house:</strong>  </br>
+        <strong> Calculate the volume of your house:</strong> </br>
         </br>
 
-        <label for="widthInput">Enter width: </br>
-            <input id="widthInput" type="text"></label> </br>
+        <label>Enter width: </br>
+            <input id="widthInput" type="number"></label> </br>
         </br>
 
-        <label for="depthInput">Enter depth: </br> 
-            <input id="depthInput" type="text"></label> </br>
+        <label>Enter depth: </br>
+            <input id="depthInput" type="number"></label> </br>
         </br>
 
-        <label for="heightInput">Enter height: </br> 
-            <input id="heightInput" type="text"></label> </br>
+        <label>Enter height: </br>
+            <input id="heightInput" type="number"></label> </br>
         </br>
 
-        <label for="sweepInput">Enter sweep: </br> 
-            <input id="sweepInput" type="text"></label> </br>
+        <label>Enter sweep: </br>
+            <input id="sweepInput" type="number"></label> </br>
         </br>
 
-        <button type="button" onclick="doInputOutput()"> Calculate </button> </br>
-    </br>
+        <button type="button" onclick="doInputOutput()"> Compute house volume </button> </br>
+        </br>
         <div id="outputDiv"></div>
     </fieldset>
 </body>
+
 </html>
